@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-new-ingress234
+  name: my-new-ingress2345
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
@@ -10,7 +10,7 @@ spec:
   - hosts:
     - test2.anaeleboo.com
     - test3.anaeleboo.com
-    secretName: example-tls3
+    secretName: example-tls5
   rules:
   - host: test2.anaeleboo.com
     http:
@@ -19,7 +19,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: my-knote-service
+            name: my-knote-service2
             port:
               number: 80
   - host: test3.anaeleboo.com
@@ -29,6 +29,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: my-app-service
+            name: my-app-service2
             port:
               number: 80
