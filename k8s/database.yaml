@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-db
+  name: my-db2
 spec:
   selector:
     matchLabels:
-      app: my-db
+      app: my-db2
   template:
     metadata:
       labels:
-        app: my-db
+        app: my-db2
     spec:
       containers:
-        - name: my-db
+        - name: my-db2
           image: mongo
           ports:
             - containerPort: 27017
           volumeMounts:
-            - name: bijou
+            - name: bijou2
               mountPath: /data/db
       volumes:
-        - name: bijou
+        - name: bijou2
           persistentVolumeClaim:
-            claimName: mongo-pvc
+            claimName: mongo-pvc2
